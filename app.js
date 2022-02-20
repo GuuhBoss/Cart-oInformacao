@@ -19,11 +19,13 @@ mongoose
   .then(() => console.log("DB Connected"))
   .catch((error) => console.log(error));
 
-//middlewares
+// middlewares
+
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
-//import routes
+
+// import routes
 const authRoutes = require("./routes/auth");
 
 // middleware routes
