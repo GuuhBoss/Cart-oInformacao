@@ -35,11 +35,11 @@ app.use(authRoutes);
 
 // frontend connection
 
-app.use(express.static(path.join(__dirname, "../frontend/build")));
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 app.get("*", function (_, res) {
   res.sendFile(
-    path.join(__dirname, "../frontend/build/index.html"),
+    path.join(__dirname, "./frontend/build/index.html"),
     function (err) {
       if (err) {
         res.status(500).send(err);
