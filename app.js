@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const morgan = require("morgan");
 const cors = require("cors");
 const app = express();
+const path = require("path");
 
 app.get("/", (req, res) => {
   res.send("Hello from node");
@@ -34,15 +35,15 @@ app.use(authRoutes);
 
 // frontend connection
 
-// app.use(express.static(path.join(__dirname, "../front-end/build")));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
-// app.get("*", function (_, res) {
-//   res.sendFile(
-//     path.join(__dirname, "../frontend/build/index.html"),
-//     function (err) {
-//       if (err) {
-//         res.status(500).send(err);
-//       }
-//     }
-//   );
-// });
+app.get("*", function (_, res) {
+  res.sendFile(
+    path.join(__dirname, "../frontend/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
