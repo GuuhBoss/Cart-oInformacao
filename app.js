@@ -6,10 +6,6 @@ const cors = require("cors");
 const app = express();
 const path = require("path");
 
-app.get("/", (req, res) => {
-  res.send("Hello from node");
-});
-
 port = process.env.PORT || 8000;
 
 app.listen(port, () => {
