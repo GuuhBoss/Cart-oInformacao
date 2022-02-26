@@ -27,9 +27,11 @@ app.use(morgan("dev"));
 
 // import routes
 const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/user");
 
 // middleware routes
 app.use(authRoutes);
+app.use(userRoutes);
 
 // frontend connection
 

@@ -5,11 +5,10 @@ const {
   signup,
   signin,
   signout,
-  requireSignin,
 } = require("../controllers/auth");
 
 router.post("/signup", signup);
- router.post("/signin", signin);
- router.get("/signout", signout);
+router.post("/signin", signin);
+router.get("/signout", signout);
 
 module.exports = router
