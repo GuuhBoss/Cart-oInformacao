@@ -4,7 +4,7 @@ export const signup = (user) => {
   // console.log(name, email, password);
   // console.log(user);
   console.log(JSON.stringify(user));
-  return fetch(`${API}/signup`, {
+  return fetch(`dihstuff.herokuapp.com/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
