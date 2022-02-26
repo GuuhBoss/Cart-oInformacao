@@ -9,7 +9,7 @@ const path = require("path");
 port = process.env.PORT || 8000;
 
 app.get("/test", (req, res) => {
-  res.send("Hello world");
+  res.send(`Server running in the port ${port}`);
 });
 
 app.listen(port, () => {
