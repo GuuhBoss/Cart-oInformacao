@@ -31,7 +31,7 @@ const Signin = () => {
     event.preventDefault();
     signin({ email, password }).then((data) => {
       console.log(data);
-      if (data.firstRrror || data.error) {
+      if (data.firstError || data.error) {
         setValue({
           ...value,
           error: data.firstError || data.error,
