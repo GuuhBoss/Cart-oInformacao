@@ -4,7 +4,7 @@ export const signup = (user) => {
   // console.log(name, email, password);
   // console.log(user);
   console.log(JSON.stringify(user));
-  return fetch(`${API}/signup`, {
+  return fetch(`/signup`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -22,7 +22,7 @@ export const signup = (user) => {
 
 export const signin = (user) => {
   // console.log(JSON.stringify(user));
-  return fetch(`${API}/signin`, {
+  return fetch(`/signin`, {
     method: "POST",
     headers: {
       Accept: "application/json",
