@@ -1,3 +1,3 @@
-const API = dihstuff.herokuapp.com
+const API = "dihstuff.herokuapp.com"
 
 export default API
